@@ -1,0 +1,45 @@
+# Core dependencies
+fastapi>=0.68.0,<0.69.0
+uvicorn[standard]>=0.15.0,<0.16.0
+python-multipart>=0.0.5,<0.0.6
+python-dotenv>=0.19.0,<0.20.0
+pydantic>=1.8.0,<2.0.0
+
+# Serial communication
+pyserial>=3.5,<4.0
+pyserial-asyncio>=0.6,<0.7
+
+# WebSocket support
+websockets>=10.0,<11.0
+
+# Audio processing (optional, for audio features)
+# Temporarily disabled for initial setup
+# sounddevice>=0.4.4,<0.5.0
+# soundfile>=0.10.3,<0.11.0
+# webrtcvad>=2.0.10,<3.0.0
+numpy>=1.21.0,<2.0.0
+
+# Database
+sqlalchemy>=1.4.0,<2.0.0
+alembic>=1.7.0,<2.0.0
+psycopg2-binary>=2.9.0,<3.0.0
+
+# AI/ML (for future features)
+# Temporarily disabled for initial setup
+# transformers>=4.11.0,<5.0.0
+# torch>=2.0.0,<2.1.0
+
+# Utilities
+typing-extensions>=3.10.0,<4.0.0
+python-dateutil>=2.8.0,<3.0.0
+python-jose[cryptography]>=3.3.0,<4.0.0
+passlib[bcrypt]>=1.7.0,<2.0.0
+
+# Development dependencies (commented out for production)
+# pytest>=6.0.0,<7.0.0
+# pytest-asyncio>=0.15.0,<0.16.0
+# httpx>=0.19.0,<0.20.0
+# black>=23.0.0,<24.0.0
+# isort>=5.0.0,<6.0.0
+# mypy>=0.910,<1.0
+# pylint>=2.11.0,<3.0.0
