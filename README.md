@@ -109,8 +109,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- Email: your.email@example.com
-- Twitter: [@dmrlibertas](https://twitter.com/dmrlibertas)
+- Email: hoop@digital-insurgent-media.com
+- Twitter: [Coming Soon})
 - GitHub Issues: [Issues](https://github.com/SuperGremlin25/dmr-libertas/issues)
 
 ## 🙏 Acknowledgments
