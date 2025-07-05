@@ -18,7 +18,16 @@ try {
     if ($LASTEXITCODE -eq 0) {
         $dockerRunning = $true
         Write-Host "✅ Docker is running" -ForegroundColor Green
+        
+        # Use containerCheck variable to display current containers
+        if ($containerCheck -match "CONTAINER ID") {
+            Write-Host "Found existing containers:" -ForegroundColor Cyan
+            Write-Host $containerCheck -ForegroundColor Gray
+        } else {
+            Write-Host "No running containers found." -ForegroundColor Yellow
+        }
     } else {
+        $dockerRunning = $false
         Write-Host "❌ Docker daemon is not responding properly" -ForegroundColor Red
         Write-Host "Docker command returned error code: $LASTEXITCODE" -ForegroundColor Red
         Write-Host "Try restarting Docker Desktop completely:" -ForegroundColor Yellow
@@ -35,9 +44,13 @@ try {
     exit 1
 }
 
-# Clean up any existing containers
+# Clean up any existing containers if Docker is running
 Write-Host "`nStopping any existing containers..." -ForegroundColor Cyan
-docker-compose down
+if ($dockerRunning) {
+    docker-compose down
+} else {
+    Write-Host "Skipping container cleanup since Docker is not running properly." -ForegroundColor Yellow
+}
 
 # Remove dangling images
 Write-Host "`nCleaning up Docker environment..." -ForegroundColor Cyan
